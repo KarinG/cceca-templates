@@ -1,4 +1,5 @@
-  <table id="crm-event_receipt" style="font-family: Arial, Verdana, sans-serif; text-align: left; width:100%; max-width:700px; padding:0; margin:0; border:0px;">
+<!-- BEGIN CCECA Customization -->
+<table id="crm-event_receipt" style="font-family: Arial, Verdana, sans-serif; text-align: left; width:100%; max-width:700px; padding:0; margin:0; border:0px;">
   <tr>
    <td>
     {assign var="greeting" value="{contact.email_greeting_display}"}{if $greeting}<p>{$greeting},</p>{/if}
@@ -13,12 +14,12 @@
     <table style="border: 1px solid #999; margin: 1em 0em 1em; border-collapse: collapse; width:100%;">
      <tr>
       <th {$headerStyle}>
-       {ts}Contribution Information{/ts}
+       {ts}付款記錄{/ts}
       </th>
      </tr>
      <tr>
       <td {$labelStyle}>
-       {ts}Contributor Name{/ts}
+       {ts}付款人姓名{/ts}
       </td>
       <td {$valueStyle}>
        {contact.display_name}
@@ -107,7 +108,7 @@
 
      <tr>
       <td {$labelStyle}>
-       {ts}Total Amount{/ts}
+       {ts}付款金額{/ts}
       </td>
       <td {$valueStyle}>
         {contribution.total_amount}
@@ -117,7 +118,7 @@
      {if '{contribution.receive_date}'}
        <tr>
        <td {$labelStyle}>
-        {ts}Contribution Date{/ts}
+        {ts}付款日期{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.receive_date|crmDate:"shortdate"}
@@ -128,7 +129,7 @@
       {if '{contribution.receipt_date}'}
       <tr>
        <td {$labelStyle}>
-        {ts}Receipt Date{/ts}
+        {ts}收據日期{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.receipt_date|crmDate:"shortdate"}
@@ -139,7 +140,7 @@
      {if {contribution.payment_instrument_id|boolean} && {contribution.paid_amount|boolean}}
       <tr>
        <td {$labelStyle}>
-        {ts}Paid By{/ts}
+        {ts}付款方式{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.payment_instrument_id:label}
@@ -282,8 +283,10 @@
   </tr>
 
  </table>
+<!-- END CCECA Customization -->
 
-  <table id="crm-event_receipt" style="font-family: Arial, Verdana, sans-serif; text-align: left; width:100%; max-width:700px; padding:0; margin:0; border:0px;">
+
+<table id="crm-event_receipt" style="font-family: Arial, Verdana, sans-serif; text-align: left; width:100%; max-width:700px; padding:0; margin:0; border:0px;">
   <tr>
    <td>
     {assign var="greeting" value="{contact.email_greeting_display}"}{if $greeting}<p>{$greeting},</p>{/if}
