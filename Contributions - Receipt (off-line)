@@ -161,7 +161,7 @@
      {if '{contribution.trxn_id}'}
       <tr>
        <td {$labelStyle}>
-        {ts}交易ID{/ts}
+        {ts}交易{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.trxn_id}
@@ -259,7 +259,7 @@
       {if {contribution_product.product_id.sku|boolean}}
        <tr>
         <td {$labelStyle}>
-         {ts}SKU{/ts}
+         {ts}存貨單位{/ts}
         </td>
         <td {$valueStyle}>
          {contribution_product.product_id.sku}
@@ -269,7 +269,7 @@
       {if {contribution_product.fulfilled_date|boolean}}
        <tr>
         <td {$labelStyle}>
-         {ts}Sent{/ts}
+         {ts}傳送{/ts}
         </td>
         <td {$valueStyle}>
           {contribution_product.fulfilled_date}
