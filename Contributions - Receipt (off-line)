@@ -5,7 +5,7 @@
     {assign var="greeting" value="{contact.email_greeting_display}"}{if $greeting}<p>{$greeting},</p>{/if}
       <p>
         {if {contribution.contribution_page_id.receipt_text|boolean}}{contribution.contribution_page_id.receipt_text}
-        {elseif {contribution.paid_amount|boolean}}{ts}下方是這筆捐款的收據{/ts}{/if}
+        {elseif {contribution.paid_amount|boolean}}{ts}以下是閣下的付款收據{/ts}{/if}
       </p>
    </td>
   </tr>
@@ -14,7 +14,7 @@
     <table style="border: 1px solid #999; margin: 1em 0em 1em; border-collapse: collapse; width:100%;">
      <tr>
       <th {$headerStyle}>
-       {ts}付款記錄{/ts}
+       {ts}付款資料{/ts}
       </th>
      </tr>
      <tr>
@@ -30,9 +30,9 @@
         <td colspan="2" {$valueStyle}>
          <table>
           <tr>
-           <th>{ts}物品{/ts}</th>
+           <th>{ts}項目{/ts}</th>
            <th>{ts}數量{/ts}</th>
-           <th>{ts}每個{/ts}</th>
+           <th>{ts}每項{/ts}</th>
            {if $isShowTax && {contribution.tax_amount|boolean}}
              <th>{ts}小計{/ts}</th>
              <th>{ts}稅率{/ts}</th>
@@ -161,7 +161,7 @@
      {if '{contribution.trxn_id}'}
       <tr>
        <td {$labelStyle}>
-        {ts}交易{/ts}
+        {ts}交易號碼{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.trxn_id}
@@ -183,14 +183,14 @@
       </tr>
       <tr>
        <th {$headerStyle}>
-        {ts}信用卡資訊{/ts}
+        {ts}信用卡資料{/ts}
        </th>
       </tr>
       <tr>
        <td colspan="2" {$valueStyle}>
         {$credit_card_type}<br />
         {$credit_card_number}<br />
-        {ts}過期{/ts}: {$credit_card_exp_date|truncate:7:''|crmDate}
+        {ts}信用咭到期日{/ts}: {$credit_card_exp_date|truncate:7:''|crmDate}
        </td>
       </tr>
      {/if}
