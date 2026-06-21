@@ -108,7 +108,7 @@
 
      <tr>
       <td {$labelStyle}>
-       {ts}付款金額{/ts}
+       {ts}金額{/ts}
       </td>
       <td {$valueStyle}>
         {contribution.total_amount}
@@ -118,7 +118,7 @@
      {if '{contribution.receive_date}'}
        <tr>
        <td {$labelStyle}>
-        {ts}付款日期{/ts}
+        {ts}日期{/ts}
        </td>
        <td {$valueStyle}>
          {contribution.receive_date|crmDate:"shortdate"}
@@ -183,7 +183,7 @@
       </tr>
       <tr>
        <th {$headerStyle}>
-        {ts}信用卡資料{/ts}
+        {ts}信用咭資料{/ts}
        </th>
       </tr>
       <tr>
