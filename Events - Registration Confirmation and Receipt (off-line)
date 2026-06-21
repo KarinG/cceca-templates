@@ -25,7 +25,7 @@
     <table style="border: 1px solid #999; margin: 1em 0em 1em; border-collapse: collapse; width:100%;">
      <tr>
       <th {$headerStyle}>
-       {ts}Event Information and Location{/ts}
+       {ts}課程/活動資料{/ts}
       </th>
      </tr>
      <tr>
@@ -120,7 +120,7 @@
      {if {contact.email_primary.email|boolean}}
       <tr>
        <th {$headerStyle}>
-        {ts}Registered Email{/ts}
+        {ts}登記電郵{/ts}
        </th>
       </tr>
       <tr>
@@ -293,7 +293,7 @@
           {if {participant.register_date|boolean}}
             <tr>
               <td {$labelStyle}>
-                {ts}Registration Date{/ts}
+                {ts}登記日期{/ts}
               </td>
               <td {$valueStyle}>
                 {participant.register_date}
@@ -304,7 +304,7 @@
           {if {contribution.receive_date|boolean}}
             <tr>
               <td {$labelStyle}>
-                  {ts}Transaction Date{/ts}
+                  {ts}交易日期{/ts}
               </td>
               <td {$valueStyle}>
                 {contribution.receive_date}
@@ -326,7 +326,7 @@
           {if {contribution.payment_instrument_id|boolean} && {contribution.paid_amount|boolean}}
             <tr>
               <td {$labelStyle}>
-                  {ts}Paid By{/ts}
+                  {ts}支付方式{/ts}
               </td>
               <td {$valueStyle}>
                   {contribution.payment_instrument_id:label}
